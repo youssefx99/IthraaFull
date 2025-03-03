@@ -29,10 +29,15 @@ app.use(
 // Routes
 app.use("/api/", userRoute);
 
-// Serve frontend for ALL non-API routes
+// Serve React frontend correctly
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "index.html"));
+  res.sendFile(path.resolve(__dirname, "client", "index.html"), (err) => {
+    if (err) {
+      res.status(500).send("Something went wrong!");
+    }
+  });
 });
+
 
 
 // Handle all other requests with a 404 Not Found
