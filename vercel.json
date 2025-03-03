@@ -8,6 +8,7 @@
   ],
   "routes": [
     { "src": "/api/.*", "dest": "/app.js" },
+    { "src": "/uploads/(.*)", "dest": "/uploads/$1" },
     { "src": "/(.*)", "dest": "/client/index.html" }
   ]
 }
