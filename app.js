@@ -29,17 +29,16 @@ app.use(
 // Routes
 app.use("/api/", userRoute);
 
-const allowedRoutes = [
-  "/",
-  "/create",
-  "/loginforadmin",
-  "/students",
-  "/edit-contract",
-];
-
-app.get(allowedRoutes, (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "index.html"));
+// Serve React frontend correctly
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "client", "index.html"), (err) => {
+    if (err) {
+      res.status(500).send("Something went wrong!");
+    }
+  });
 });
+
+
 
 // Handle all other requests with a 404 Not Found
 app.use((req, res) => {
