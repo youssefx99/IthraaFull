@@ -29,17 +29,11 @@ app.use(
 // Routes
 app.use("/api/", userRoute);
 
-const allowedRoutes = [
-  "/",
-  "/create",
-  "/loginforadmin",
-  "/students",
-  "/edit-contract",
-];
-
-app.get(allowedRoutes, (req, res) => {
+// Serve frontend for ALL non-API routes
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "index.html"));
 });
+
 
 // Handle all other requests with a 404 Not Found
 app.use((req, res) => {
