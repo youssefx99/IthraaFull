@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.e549c375.css",
-    "main.js": "/static/js/main.c30840e2.js",
+    "main.js": "/static/js/main.e3cd7f0b.js",
     "static/js/488.2458a0cb.chunk.js": "/static/js/488.2458a0cb.chunk.js",
     "static/media/Cairo-SemiBold-3_2.ttf": "/static/media/Cairo-SemiBold-3_2.4d42b233a84e0a4fcc0c.ttf",
     "static/media/Cairo-Bold.ttf": "/static/media/Cairo-Bold.d6131f35e4885ab019ba.ttf",
     "index.html": "/index.html",
     "main.e549c375.css.map": "/static/css/main.e549c375.css.map",
-    "main.c30840e2.js.map": "/static/js/main.c30840e2.js.map",
+    "main.e3cd7f0b.js.map": "/static/js/main.e3cd7f0b.js.map",
     "488.2458a0cb.chunk.js.map": "/static/js/488.2458a0cb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e549c375.css",
-    "static/js/main.c30840e2.js"
+    "static/js/main.e3cd7f0b.js"
   ]
 }
