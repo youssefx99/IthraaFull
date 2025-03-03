@@ -29,7 +29,13 @@ app.use(
 // Routes
 app.use("/api/", userRoute);
 
-const allowedRoutes = ["/", "/create", "/loginforadmin", "/students", "/edit-contract"];
+const allowedRoutes = [
+  "/",
+  "/create",
+  "/loginforadmin",
+  "/students",
+  "/edit-contract",
+];
 
 app.get(allowedRoutes, (req, res) => {
   res.sendFile(path.join(__dirname, "client", "index.html"));
@@ -64,7 +70,7 @@ app.use((req, res) => {
 // });
 
 // Start Server
-const PORT = 3080;
+const PORT = process.env.PORT || 3080;
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server is running on port ${PORT}`);
 });
